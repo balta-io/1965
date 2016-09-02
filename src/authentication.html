@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link rel="stylesheet" href="http://bootswatch.com/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,7 +16,36 @@
     <div class="col-md-4">
         <h3 class="text-center" id="displayName">Você não está autenticado</h3>
         <br>
-        <button class="btn btn-lg btn-block btn-primary" id="authButton">Autenticar com GitHub</button>
+        <form>
+            <div class="form-group">
+                <label for="emailInput">E-mail</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <label for="passwordInput">Senha</label>
+                <input type="password" class="form-control" id="passwordInput" placeholder="Senha">
+            </div>
+        </form>
+
+        <button class="btn btn-lg btn-block btn-primary" id="authEmailPassButton">Autenticar</button>
+        <button class="btn btn-lg btn-block btn-info" id="createUserButton">Criar Nova Conta</button>
+        <br>
+    
+        <p class="text-center"><small>-- ou --</small></p>
+
+        <p class="text-center">
+            <button class="btn btn-lg btn-default" id="authGitHubButton"><i class="fa fa-github fa-2x"></i></button>
+            <button class="btn btn-lg btn-primary" id="authFacebookButton"><i class="fa fa-facebook fa-2x"></i></button>
+            <button class="btn btn-lg btn-info" id="authTwitterButton"><i class="fa fa-twitter fa-2x"></i></button>
+            <button class="btn btn-lg btn-danger" id="authGoogleButton"><i class="fa fa-google fa-2x"></i></button>
+            <button class="btn btn-lg btn-warning" id="authAnonymouslyButton"><i class="fa fa-user fa-2x"></i></button>
+        </p>
+
+        <br>
+
+        <p class="text-center">
+        <button class="btn btn-lg btn-block btn-default" id="logOutButton">Sair</button>            
+        </p>
     </div>
 
     <br><br>
