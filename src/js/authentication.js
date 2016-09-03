@@ -47,6 +47,19 @@ authEmailPassButton.addEventListener('click', function () {
         });
 });
 
+// Logout
+logOutButton.addEventListener('click', function () {
+    firebase
+        .auth()
+        .signOut()
+        .then(function () {
+            displayName.innerText = 'Você não está autenticado';
+            alert('Você se deslogou');
+        }, function (error) {
+            console.error(error);
+        });
+});
+
 // Autenticar Anônimo
 authAnonymouslyButton.addEventListener('click', function () {
     firebase
@@ -71,6 +84,13 @@ authGitHubButton.addEventListener('click', function () {
     signIn(provider);
 });
 
+// Autenticar com Google
+authGoogleButton.addEventListener('click', function () {
+    // Providers
+    var provider = new firebase.auth.GoogleAuthProvider();
+    signIn(provider);
+});
+
 // Autenticar com Facebook
 authFacebookButton.addEventListener('click', function () {
     // Providers
@@ -82,13 +102,6 @@ authFacebookButton.addEventListener('click', function () {
 authTwitterButton.addEventListener('click', function () {
     // Providers
     var provider = new firebase.auth.TwitterAuthProvider();
-    signIn(provider);
-});
-
-// Autenticar com Google
-authGoogleButton.addEventListener('click', function () {
-    // Providers
-    var provider = new firebase.auth.GoogleAuthProvider();
     signIn(provider);
 });
 
@@ -104,16 +117,3 @@ function signIn(provider) {
             alert('Falha na autenticação');
         });
 }
-
-// Logout
-logOutButton.addEventListener('click', function () {
-    firebase
-        .auth()
-        .signOut()
-        .then(function () {
-            displayName.innerText = 'Você não está autenticado';
-            alert('Você se deslogou');
-        }, function (error) {
-            console.error(error);
-        });
-});

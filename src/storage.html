@@ -5,23 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
     <link rel="stylesheet" href="http://bootswatch.com/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <h1>Bem vindo ao Firebase</h1>
+    <h1>Storage</h1>
 
-    <ul>
-        <li><a href="real-time-database.html">Real Time Database</a></li>
-        <li><a href="authentication.html">Autenticação</a></li>
-        <li><a href="storage.html">Storage</a></li>
-    </ul>
-    
+    <progress value="0" max="100" id="uploader"></progress>
+    <br>
+    <input type="file" value="Upload" id="fileButton">
+
+    <br><br>
+    <a class="button button-clear" href="index.html">Voltar para Home</a>
+
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/storage.js"></script>
 </body>
 
 </html>
