@@ -15,3 +15,7 @@ Neste curso vamos entender como o Firebase trabalha, quais seus benefícios e co
  * Storage
  * Hosting
  * Notificações
+
+Link para o curso no YouTube
+
+https://www.youtube.com/playlist?list=PLHlHvK2lnJnccBL9grcoRxv8CsLa9Q_4q
